@@ -3,110 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunil Rathwa | Lecturer & Android Developer</title>
+<title>Sunil Rathwa | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f7fa;
+background:#0f172a;
+color:white;
 }
-header{
-    background:#0d1117;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(15,23,42,0.95);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+z-index:1000;
 }
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid white;
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#38bdf8;
 }
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
 }
-.card{
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
 }
-h2{
-    color:#0d1117;
+
+nav a:hover{
+color:#38bdf8;
 }
-footer{
-    text-align:center;
-    background:#0d1117;
-    color:white;
-    padding:15px;
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(
+135deg,
+#2563eb,
+#7c3aed,
+#06b6d4
+);
 }
+
+.hero h1{
+font-size:70px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:28px;
+font-weight:400;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
 .btn{
-    display:inline-block;
-    background:#238636;
-    color:white;
-    padding:10px 20px;
-    text-decoration:none;
-    border-radius:5px;
+padding:15px 35px;
+background:white;
+color:#2563eb;
+text-decoration:none;
+font-weight:600;
+border-radius:50px;
+transition:.4s;
+display:inline-block;
 }
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.about{
+text-align:center;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(56,189,248,.5);
+}
+
+.card h3{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill h3{
+margin-bottom:10px;
+}
+
+.bar{
+height:12px;
+background:#334155;
+border-radius:20px;
+overflow:hidden;
+}
+
+.bar span{
+display:block;
+height:100%;
+background:#38bdf8;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
 </style>
 </head>
 <body>
 
-<header>
-<img src="profile.jpg" class="profile">
-<h1>Sunil Rathwa</h1>
-<h3>Lecturer | Android Developer | Firebase Enthusiast</h3>
-<a href="https://github.com/invinciblecapable-droid" class="btn">
-GitHub Profile
-</a>
-</header>
+<nav>
+<div class="logo">Sunil Rathwa</div>
 
-<div class="container">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div>
+
+<h1>Sunil Rathwa</h1>
+
+<h2>Computer Engineering Lecturer & Android Developer</h2>
+
+<p>
+Building Android Apps, Firebase Solutions and AI Based Projects
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+
+I am Sunil Rathwa, a Computer Engineering Lecturer and Android Developer.
+I build Android Applications using Firebase, Java, Kotlin and modern web technologies.
+My interests include Artificial Intelligence, Machine Learning and Educational Technology.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="cards">
 
 <div class="card">
-<h2>About Me</h2>
+<h3>DDCET Prep App</h3>
 <p>
-Computer Engineering Lecturer at Government Polytechnic Dahod.
-Passionate about Android App Development, Firebase, AI Tools,
-Machine Learning and Educational Technology.
+Android application for DDCET preparation with MCQs, Notes and Mock Tests.
 </p>
 </div>
 
 <div class="card">
-<h2>Skills</h2>
-<ul>
-<li>Android Studio</li>
-<li>Kotlin & Java</li>
-<li>Firebase</li>
-<li>Machine Learning</li>
-<li>Git & GitHub</li>
-<li>PHP & MySQL</li>
-</ul>
+<h3>Firebase Authentication App</h3>
+<p>
+User Login, Registration and Firestore Integration using Firebase.
+</p>
 </div>
 
 <div class="card">
-<h2>Projects</h2>
-<ul>
-<li>DDCET Prep App</li>
-<li>Firebase Test Application</li>
-<li>Student Management System</li>
-<li>AI Education Tools</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
-<p>GitHub: invinciblecapable-droid</p>
+<h3>AI Education Projects</h3>
+<p>
+Machine Learning and Generative AI based educational tools.
+</p>
 </div>
 
 </div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+<h3>Android Development</h3>
+<div class="bar">
+<span style="width:90%"></span>
+</div>
+</div>
+
+<div class="skill">
+<h3>Firebase</h3>
+<div class="bar">
+<span style="width:85%"></span>
+</div>
+</div>
+
+<div class="skill">
+<h3>Java & Kotlin</h3>
+<div class="bar">
+<span style="width:88%"></span>
+</div>
+</div>
+
+<div class="skill">
+<h3>Machine Learning</h3>
+<div class="bar">
+<span style="width:75%"></span>
+</div>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<p>Email : yourmail@gmail.com</p>
+
+<br>
+
+<p>
+GitHub :
+<a href="https://github.com/invinciblecapable-droid">
+invinciblecapable-droid
+</a>
+</p>
+
+</div>
+
+</section>
 
 <footer>
-© 2026 Sunil Rathwa | All Rights Reserved
+
+<p>© 2026 Sunil Rathwa | All Rights Reserved</p>
+
 </footer>
 
 </body>
